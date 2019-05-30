@@ -1,0 +1,15 @@
+version: "3.0"
+services:
+  py-notebook:
+    build: ./image
+    image: jupiter-an/notebook
+    container_name: jupiter-an 
+    ports:
+      - 8888:8888
+    entrypoint:
+      - start-notebook.sh
+      - --NotebookApp.password='sha1:0b693d4b0248:a06da93936310eee98e56a09ac40cd05f496c411'
+      - --NotebookApp.allow_origin='*'
+    volumes:
+      - ./jovyan:/home/jovyan
+      - ./data:/data
