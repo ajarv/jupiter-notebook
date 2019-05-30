@@ -33,5 +33,3 @@ Access at  http://{docker-host}:8888   . Default password is `sequence`
 ```bash
 docker-compose up -d 
 ```
-
-### Access Confluent Cloud CLI
