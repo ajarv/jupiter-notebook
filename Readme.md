@@ -15,7 +15,8 @@ git clone  <Git URL of this project> ~/workspace/kafka-notebook
 ## Build Notebook Image
 
 ```bash
-docker build -t jupiter-an/notebook  ./image  
+docker-compose build notebook
+# docker build -t jupiter-an/notebook  ./image  
 ```
 
 ### Run Notebook 

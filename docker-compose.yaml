@@ -1,9 +1,9 @@
 version: "3.0"
 services:
-  py-notebook:
+  notebook:
     build: ./image
-    image: jupiter-an/notebook
-    container_name: jupiter-an 
+    image: kenab/notebook
+    container_name: kenab 
     ports:
       - 8888:8888
     entrypoint:
