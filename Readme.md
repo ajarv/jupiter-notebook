@@ -50,6 +50,6 @@ docker-compose up -d
 ### Run the Job to fetch treasury data
 
 ```bash
-docker-compose run --entrypoint ./jobs/jseq.sh notebook
+docker-compose run --rm --entrypoint ./jobs/jseq.sh notebook
 
 ```
