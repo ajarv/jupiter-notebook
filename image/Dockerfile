@@ -75,6 +75,6 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions /home/$NB_USER
 
 COPY requirements.txt /tmp
-RUN pip install -r /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt && conda install pytables
 
 USER $NB_UID
