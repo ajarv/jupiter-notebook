@@ -46,3 +46,10 @@ Access at  http://{docker-host}:8888   . Default password is `sequence`
 ```bash
 docker-compose up -d 
 ```
+
+### Run the Job to fetch treasury data
+
+```bash
+docker-compose run --entrypoint ./jobs/jseq.sh notebook
+
+```
