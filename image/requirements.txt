@@ -2,3 +2,4 @@ confluent-kafka
 pyyaml
 ipywidgets
 avro-python3
+h5py
