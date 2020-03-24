@@ -1,0 +1,20 @@
+{
+ "station_1": {
+  "machine_time_per_order_60": 0.10791324200913241,
+  "machine_kit_processing_time": 0.10791324200913241,
+  "machine_capacity_daily_kits": 9.266703338552025
+ },
+ "setup_time_per_order": 0,
+ "station_3": {
+  "machine_time_per_order_60": 0.06608675799086758,
+  "machine_kit_processing_time": 0.06608675799086758,
+  "machine_capacity_daily_kits": 15.13162440406274
+ },
+ "min_observed_processing_time_per_order": 0.275,
+ "station_2": {
+  "machine_time_per_order_60": 0.13060730593607306,
+  "machine_kit_processing_time": 0.13060730593607306,
+  "machine_capacity_daily_kits": 7.656539523826171
+ },
+ "plant_mc_time_per_order_60": 0.30460730593607305
+}

@@ -1,0 +1,3 @@
+*/12 * * * * /home/ajar/work/lf_3/check_lt.sh
+*/3 * * * * /home/ajar/work/lf_3/check_gs.sh
+
