@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import datetime
 import csv
+import sys
 
 def get_html(u = 'https://www.worldometers.info/coronavirus/#countries'):
     res = requests.get(u)
@@ -31,14 +32,17 @@ def formatted_rows(html_doc):
     if not rows : return None
     rows[0] = ['Country', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths', 'TotalRecovered', 'ActiveCases', 'Serious_Critical', 'Cases_By_Million']
     for row in rows[1:]:
-        for ix in range(1,len(row)-1):
-            row[ix] = re.sub("[^0-9]", "", row[ix])
+        for ix in range(1,len(row)):
+            row[ix] = re.sub("[^0-9.]", "", row[ix])
+        print (row)
     return rows
 
 if __name__ == "__main__":
     html_doc = get_html()
     rows = formatted_rows(html_doc)
-    csv_file = '/data/cov-'+datetime.datetime.now().strftime('%Y-%m-%d.%H.csv')
+    data_dir = sys.argv[1]
+    file_name = datetime.datetime.now().strftime('cov-%Y-%m-%d.%H.csv')
+    csv_file = f'{data_dir}/{file_name}'
     if rows:
         with open(csv_file, 'w') as csvfile:
             writer = csv.writer(csvfile)
