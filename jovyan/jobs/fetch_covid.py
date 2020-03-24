@@ -34,7 +34,7 @@ def formatted_rows(html_doc):
     for row in rows[1:]:
         for ix in range(1,len(row)):
             row[ix] = re.sub("[^0-9.]", "", row[ix])
-        print (row)
+        #print (row)
     return rows
 
 if __name__ == "__main__":
