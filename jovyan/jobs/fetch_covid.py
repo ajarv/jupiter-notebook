@@ -29,7 +29,7 @@ def get_current_stats(html_doc):
 def formatted_rows(html_doc):
     rows = get_current_stats(html_doc)
     if not rows : return None
-    rows[0] = ['Country', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths', 'TotalRecovered', 'ActiveCases', 'Serious,Critical', 'Cases_By_Million']
+    rows[0] = ['Country', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths', 'TotalRecovered', 'ActiveCases', 'Serious_Critical', 'Cases_By_Million']
     for row in rows[1:]:
         for ix in range(1,len(row)-1):
             row[ix] = re.sub("[^0-9]", "", row[ix])
