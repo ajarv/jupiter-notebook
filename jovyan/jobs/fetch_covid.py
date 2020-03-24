@@ -30,12 +30,16 @@ def get_current_stats(html_doc):
 def formatted_rows(html_doc):
     rows = get_current_stats(html_doc)
     if not rows : return None
-    rows[0] = ['Country', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths', 'TotalRecovered', 'ActiveCases', 'Serious_Critical', 'Cases_per_mill','Deaths_per_mill']
+    t = datetime.datetime.utcnow().isoformat()
+    hdrs = ['Time','Country', 'TotalCases', 'NewCases', 'TotalDeaths',\
+         'NewDeaths', 'TotalRecovered', 'ActiveCases', 'Serious_Critical', 'Cases_per_mill','Deaths_per_mill']
+    nrows =[hdrs]
     for row in rows[1:]:
         for ix in range(1,len(row)):
             row[ix] = re.sub("[^0-9.]", "", row[ix])
-        print (row)
-    return rows
+        nrows.append([t]+row)
+        # print (row)
+    return nrows
 
 if __name__ == "__main__":
     html_doc = get_html()
