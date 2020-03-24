@@ -11,4 +11,3 @@ echo "Creating Charts"
 mkdir -p ${WORK_DIR}/notebook/charts
 python ${BASE}/job-makechart.py --in-csv /data/treasury_yield.csv --out-png ${WORK_DIR}/notebook/charts/ty_3m_5y_30y.png
 
-
