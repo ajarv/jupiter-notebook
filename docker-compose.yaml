@@ -12,4 +12,5 @@ services:
       - --NotebookApp.allow_origin='*'
     volumes:
       - ./jovyan:/home/jovyan
+      - ./data:/home/jovyan/data
       - ./data:/data
