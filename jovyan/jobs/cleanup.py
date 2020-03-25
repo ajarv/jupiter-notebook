@@ -24,4 +24,8 @@ def clean_file(file_path):
         writer.writerows(rows)
 
 if __name__ == "__main__":
-    clean_file(sys.argv[1])
+    p,f = os.path.split(sys.argv[1])
+    _ff = [_f for _f in os.listdir(p) if _f.startswith(f)]
+    for _f in _ff:
+        print (_f)
+        clean_file(f"{p}/{_f}")
