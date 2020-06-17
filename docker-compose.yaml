@@ -14,3 +14,15 @@ services:
       - ./jovyan:/home/jovyan
       - ./data:/home/jovyan/data
       - ./data:/data
+  beast:
+    build: ./image01
+    image: kenab/zion
+    container_name: zion 
+    ports:
+      - 8888:8888
+    entrypoint:
+      - whoami
+    volumes:
+      - ./jovyan:/home/jovyan
+      - ./data:/home/jovyan/data
+      - ./data:/data
