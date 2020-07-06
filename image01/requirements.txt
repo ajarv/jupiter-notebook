@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 confluent-kafka
 pyyaml
 ipywidgets
 avro-python3
 h5py
 tables
-=======
-pyyaml
-numpy
-pandas
->>>>>>> d42b61e5461cc338c0ad6db45ced20352d961129
