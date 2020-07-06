@@ -1,6 +1,6 @@
-confluent-kafka
 pyyaml
 ipywidgets
-avro-python3
 h5py
 tables
+yahoo_fin
+requests_html
